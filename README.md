@@ -175,7 +175,7 @@ First, let's install the scala-cli. The installation instructions are available 
 
 Now, let's create the class:
 ```scala
-//> using scala "3.1.0"
+using scala "3.1.0"
 package com.yadavan88.scalacli
 import $dep.`com.lihaoyi::os-lib:0.7.8`
 import os._
@@ -194,7 +194,7 @@ object ScalaCliApp {
 ```
 __This sample code is placed outside the src directory to avoid sbt compile issue since the scala-cli syntax is not compatible with sbt. The file is available under the path `<project_root>/scalacli_app`__
 
-The line starting with `//>` has a special meaning in scala-cli. It is called as `directives`, which are like configurations. In this example, it tells the scala-cli to use scala version `3.1.0` to compile and build the application. 
+The line starting with `using` has a special meaning in scala-cli. It is called as `directives`, which are like configurations. In this example, it tells the scala-cli to use scala version `3.1.0` to compile and build the application. 
 For additional dependecies, scala-cli uses the ammonite style ivy syntax using the keyword `$dep`. 
 
 Note that, we can use any supported scala versions. Scala-cli internally uses [coursier](https://github.com/yadavan88/coursier-cheatsheets) to manage the dependencies.
