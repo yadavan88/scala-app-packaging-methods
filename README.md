@@ -1,4 +1,4 @@
-# Different Ways To package A Simple Scala App
+# Different Ways To Package A Simple Scala App
 
 ## 1. Introduction
 In this small article, let's look at different ways in which we can package our simple Scala application. 
