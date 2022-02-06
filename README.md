@@ -68,7 +68,7 @@ Now, the jar file will be named as `assemblyApp.jar`.
 Similarly, a lot more configuration options are available. More details are given in the [sbt-assembly github](https://github.com/sbt/sbt-assembly) page.
 
 ## 4. SBT Native Packager
-SBT Assembly is a good plugin to create a jar file. But if there project is getting bigger, sbt-assembly might be a bit of difficult to manage. Especially, we might need to provide a lot of rules to handle deduplication. Also, it is not possible to create any other packaging formats using sbt-assembly. Here comes the use of `[sbt-native-packager](https://github.com/sbt/sbt-native-packager)`. 
+SBT Assembly is a good plugin to create a jar file. But if there project is getting bigger, sbt-assembly might be a bit of difficult to manage. Especially, we might need to provide a lot of rules to handle deduplication. Also, it is not possible to create any other packaging formats using sbt-assembly. Here comes the use of [sbt-native-packager](https://github.com/sbt/sbt-native-packager). 
 
 SBT Native Packager allows us to create a wide variety of native packging formats like _exe_, _zip_, _msi_, _docker_, etc. 
 
