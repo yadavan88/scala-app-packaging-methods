@@ -201,10 +201,10 @@ Note that, we can use any supported scala versions. Scala-cli internally uses [c
 
 Now, let's package our small app using the `package` task of scala-cli:
 ```scala
-scala-cli package ScalaCliApp.scala -o cliapp --assembly
+scala-cli --power package ScalaCliApp.scala -o cliapp --assembly
 ```
 
-`--assembly` flag informs scala-cli to package all the dependencies along with our code. We can specify the app name using `-o` flag. The above command when executed will generate the app `cliapp`. We can execute the app using `./cliapp`.
+`--assembly` flag informs scala-cli to package all the dependencies along with our code. We can specify the app name using `-o` flag. The above command when executed will generate the app `cliapp`. We can execute the app using `./cliapp`. The `--power` flag is required since this is a power user command. 
 
 **Note: scala-cli might not be a good option if there are many files and dependencies are involved.**
 
