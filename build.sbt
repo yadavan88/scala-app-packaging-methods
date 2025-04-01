@@ -1,10 +1,10 @@
 name := "app-packaging"
 version := "1.0.2"
 
-ThisBuild / scalaVersion := "3.1.0"
+ThisBuild / scalaVersion := "3.6.4"
 
 libraryDependencies ++= Seq(
-  "com.lihaoyi" %% "os-lib" % "0.7.8"
+  "com.lihaoyi" %% "os-lib" % "0.11.4"
 )
 
 val mainClassPath = "com.yadavan88.app.mainMethod"
@@ -29,7 +29,7 @@ jlinkIgnoreMissingDependency := JlinkIgnore.only(
 
 //SBT Proguard plugin
 enablePlugins(SbtProguard)
-Proguard / proguardOptions ++= Seq("-dontoptimize","-dontnote", "-dontwarn", "-ignorewarnings")
+Proguard / proguardOptions ++= Seq("-dontoptimize","-dontnote", "-dontwarn", "-ignorewarnings", "-printmapping mappings.txt")
 Proguard / proguardOptions += ProguardOptions.keepMain("com.yadavan88.app.mainMethod")
 Proguard / proguardInputs := (Compile / dependencyClasspath).value.files
 Proguard / proguardFilteredInputs ++= ProguardOptions.noFilter((Compile / packageBin).value)
